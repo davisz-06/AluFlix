@@ -1,0 +1,310 @@
+/* Reset básico para padronizar todos os elementos */
+* {
+    margin: 0; /* Remove margem padrão de todos os elementos */
+    padding: 0; /* Remove preenchimento padrão */
+    box-sizing: border-box; /* Inclui borda e padding no cálculo de largura/altura */
+}
+
+/* Corpo da página */
+body {
+    background: linear-gradient(135deg, #0f0f0f 0%, #1a1a2e 25%, #0f3460 50%, #16213e 75%, #0f0f0f 100%); /* Gradiente diagonal elegante */
+    background-attachment: fixed; /* Mantém o gradiente fixo ao rolar */
+    background-size: 400% 400%; /* Tamanho maior para o gradiente */
+    color: #ffffff; /* Define texto branco */
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Define fonte similar à Netflix */
+    display: flex; /* Ativa modo flexbox para posicionamento */
+    flex-direction: column; /* Empilha elementos verticalmente */
+    justify-content: flex-start; /* Alinha ao topo */
+    align-items: center; /* Centraliza itens na horizontal */
+    min-height: 100vh; /* Garante altura mínima de 100% da altura da tela */
+    overflow-x: hidden; /* Remove scrollbar horizontal */
+    position: relative; /* Para elementos absolutos internos */
+}
+
+/* Efeito de filme no fundo (opcional - adiciona refinamento) */
+body::before {
+    content: ''; /* Cria elemento pseud */
+    position: fixed; /* Posição fixa */
+    top: 0; /* Do topo */
+    left: 0; /* Da esquerda */
+    right: 0; /* Da direita */
+    bottom: 0; /* Do fundo */
+    background: radial-gradient(circle at 20% 50%, rgba(229, 9, 20, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(30, 52, 96, 0.15) 0%, transparent 50%); /* Gradientes radiais para profundidade */
+    pointer-events: none; /* Permite cliques através do elemento */
+    z-index: -1; /* Coloca atrás dos outros elementos */
+}
+
+/* Header Top com Logo AluFlix */
+.header-top {
+    width: 100%; /* Ocupar toda a largura */
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 100%); /* Faixa escura com gradiente */
+    padding: 1.5rem 2rem; /* Espaçamento interno */
+    display: flex; /* Flexbox */
+    justify-content: flex-start; /* Alinha à esquerda */
+    align-items: center; /* Centraliza verticalmente */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8); /* Sombra para profundidade */
+}
+
+.logo-container {
+    display: flex; /* Flexbox */
+    align-items: center; /* Centraliza verticalmente */
+    gap: 0.5rem; /* Espaço entre ícone e texto */
+}
+
+.logo-aluflix {
+    font-size: 2rem; /* Tamanho grande */
+    font-weight: 700; /* Peso bold */
+    color: #e50914; /* Cor vermelha Netflix */
+    text-shadow: 0 0 10px rgba(229, 9, 20, 0.5), 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra de texto para destaque */
+    letter-spacing: 2px; /* Espaçamento entre letras */
+    margin: 0; /* Remove margem padrão */
+}
+
+.logo-aluflix {
+    font-size: 2rem; /* Tamanho grande */
+    font-weight: 700; /* Peso bold */
+    color: #e50914; /* Cor vermelha Netflix */
+    text-shadow: 0 0 10px rgba(229, 9, 20, 0.5), 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra de texto para destaque */
+    letter-spacing: 2px; /* Espaçamento entre letras */
+    margin: 0; /* Remove margem padrão */
+}
+
+/* Elemento main */
+main {
+    width: 100%; /* Ocupar toda largura */
+    display: flex; /* Usa flexbox */
+    flex-direction: column; /* Empilha elementos verticalmente */
+    align-items: center; /* Centraliza itens horizontalmente */
+    justify-content: center; /* Centraliza itens verticalmente */
+    flex: 1; /* Expande para preencher espaço disponível */
+    padding: 3rem 2rem; /* Espaçamento interno */
+    gap: 2rem; /* Espaço entre seções */
+}
+
+/* Cabeçalho */
+header h1 {
+    font-size: 3rem; /* Tamanho grande do título (48px) */
+    text-align: center; /* Alinha texto no centro */
+    margin-bottom: 1rem; /* Adiciona espaço abaixo do título */
+    font-weight: 300; /* Define peso leve da fonte */
+    letter-spacing: 1px; /* Espaçamento entre letras */
+}
+
+/* Seção de ações (Gerenciar e Adicionar) */
+.profile-actions {
+    display: flex; /* Flexbox */
+    gap: 1.5rem; /* Espaço entre botões */
+    justify-content: center; /* Centraliza os botões */
+    flex-wrap: wrap; /* Permite quebra de linha */
+    margin-bottom: 1rem; /* Espaço abaixo */
+}
+
+/* Botões de ação */
+.action-btn {
+    display: flex; /* Flexbox */
+    align-items: center; /* Centraliza verticalmente */
+    gap: 0.5rem; /* Espaço entre ícone e texto */
+    padding: 0.8rem 1.5rem; /* Espaçamento interno */
+    background: linear-gradient(135deg, #e50914 0%, #831009 100%); /* Gradiente vermelho Netflix */
+    color: #ffffff; /* Texto branco */
+    border: none; /* Remove borda padrão */
+    border-radius: 4px; /* Arredonda cantos levemente */
+    font-size: 1rem; /* Tamanho do texto */
+    font-weight: 600; /* Peso semi-bold */
+    cursor: pointer; /* Cursor como mão */
+    transition: all 0.3s ease; /* Anima todas as propriedades */
+    box-shadow: 0 4px 15px rgba(229, 9, 20, 0.3); /* Sombra sutil */
+    text-transform: uppercase; /* Texto em maiúsculas */
+    letter-spacing: 0.5px; /* Espaçamento entre letras */
+}
+
+.action-btn:hover {
+    background: linear-gradient(135deg, #ff1a1f 0%, #a61410 100%); /* Gradiente mais claro no hover */
+    transform: translateY(-2px); /* Eleva o botão */
+    box-shadow: 0 6px 20px rgba(229, 9, 20, 0.5); /* Sombra mais pronunciada */
+}
+
+.action-btn:active {
+    transform: translateY(0); /* Volta ao estado normal ao clicar */
+    box-shadow: 0 2px 10px rgba(229, 9, 20, 0.3); /* Sombra reduzida */
+}
+
+.icon-gear,
+.icon-plus {
+    font-size: 1.2rem; /* Tamanho do ícone */
+}
+
+/* Seção de perfis */
+.profiles {
+    display: flex; /* Ativa flexbox */
+    justify-content: center; /* Centraliza itens horizontalmente */
+    gap: 2rem; /* Espaçamento entre itens */
+    flex-wrap: wrap; /* Permite quebra de linha */
+}
+
+/* Cada perfil */
+.profile {
+    text-align: center; /* Centraliza conteúdo do perfil */
+    cursor: pointer; /* Muda cursor para mão ao passar */
+    transition: transform 0.3s ease; /* Anima transformações suavemente em 0.3s */
+}
+
+.profiles ul {
+    list-style: none; /* Remove as bolinhas (marcadores) da lista não ordenada */
+    display: flex; /* Ativa flexbox para layout horizontal */
+    justify-content: center; /* Centraliza itens horizontalmente */
+    gap: 0; /* Remove espaçamento entre itens ul */
+    flex-wrap: wrap; /* Permite quebra de linha em telas pequenas */
+    padding: 0; /* Remove preenchimento padrão da lista */
+}
+
+.profiles ul > li {
+    width: 100%; /* Item da lista não ordenada ocupa toda a largura */
+}
+
+.profiles ol {
+    list-style: none; /* Remove numeração da lista ordenada */
+    display: flex; /* Ativa flexbox para layout horizontal */
+    justify-content: center; /* Centraliza itens horizontalmente */
+    gap: 2rem; /* Define espaçamento entre perfis */
+    flex-wrap: wrap; /* Permite quebra de linha em telas pequenas */
+    padding: 0; /* Remove preenchimento padrão da lista */
+}
+
+.profile:hover {
+    transform: scale(1.05); /* Aumenta o tamanho em 5% ao passar o mouse */
+}
+
+.profile img {
+    width: 150px; /* Define largura da imagem */
+    height: 150px; /* Define altura da imagem */
+    border-radius: 8px; /* Arredonda os cantos da imagem */
+    object-fit: cover; /* Preenche o espaço mantendo aspecto */
+    border: 3px solid transparent; /* Borda invisível (reserva espaço) */
+    transition: border-color 0.3s ease; /* Anima mudança de cor de borda */
+}
+
+.profile:hover img {
+    border-color: #e50914; /* Muda borda para vermelho Netflix ao passar o mouse */
+}
+
+.profile figcaption {
+    margin-top: 1rem; /* Adiciona espaço acima do nome do perfil */
+    font-size: 1.2rem; /* Define tamanho do texto do nome */
+    font-weight: 400; /* Define peso normal da fonte */
+    color: #808080; /* Define cor cinza inicial */
+    transition: color 0.3s ease; /* Anima transição de cor suavemente */
+}
+
+.profile:hover figcaption {
+    color: #ffffff; /* Muda nome para branco ao passar o mouse */
+}
+
+/* Botão de alternância de tema */
+.theme-toggle {
+    position: fixed; /* Posiciona fixo na tela */
+    top: 20px; /* Distância do topo */
+    right: 20px; /* Distância da direita */
+    background-color: transparent; /* Fundo transparente */
+    border: none; /* Remove borda padrão */
+    font-size: 2rem; /* Tamanho do ícone */
+    cursor: pointer; /* Muda cursor para mão */
+    transition: transform 0.3s ease; /* Anima transformações */
+    z-index: 1000; /* Garante que fica acima de outros elementos */
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.5)); /* Sombra para destaque */
+}
+
+.theme-toggle:hover {
+    transform: scale(1.2); /* Aumenta tamanho ao passar o mouse */
+}
+
+/* Modo Claro (Light Mode) */
+body.light-mode {
+    background: linear-gradient(135deg, #f5f5f5 0%, #e8e8f0 25%, #d8e8ff 50%, #e0d8f0 75%, #f5f5f5 100%); /* Gradiente leve */
+    background-attachment: fixed; /* Mantém gradiente fixo */
+    color: #333333; /* Texto escuro */
+}
+
+body.light-mode::before {
+    background: radial-gradient(circle at 20% 50%, rgba(229, 9, 20, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(30, 52, 96, 0.08) 0%, transparent 50%); /* Gradientes mais suaves */
+}
+
+body.light-mode .header-top {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.8) 0%, rgba(240, 240, 240, 0.6) 100%); /* Faixa clara */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra mais suave */
+}
+
+body.light-mode .logo-aluflix {
+    color: #c41e3a; /* Vermelho mais escuro em modo claro */
+    text-shadow: 0 0 5px rgba(229, 9, 20, 0.2), 1px 1px 2px rgba(0, 0, 0, 0.2); /* Sombra mais suave */
+}
+
+body.light-mode header h1 {
+    color: #333333; /* Título cinza escuro */
+}
+
+body.light-mode .profile figcaption {
+    color: #666666; /* Legenda em cinza médio */
+}
+
+body.light-mode .profile:hover figcaption {
+    color: #333333; /* Legenda em cinza escuro no hover */
+}
+
+body.light-mode .profile:hover img {
+    border-color: #e50914; /* Mantém borda vermelha Netflix */
+}
+
+body.light-mode .action-btn {
+    background: linear-gradient(135deg, #e50914 0%, #831009 100%); /* Mantém cor vermelha */
+    box-shadow: 0 4px 15px rgba(229, 9, 20, 0.2); /* Sombra mais suave */
+}
+
+/* Responsividade - Ajustes para telas menores de 768px */
+@media (max-width: 768px) {
+    .header-top {
+        padding: 1rem 1.5rem; /* Reduz espaçamento */
+    }
+
+    .logo-aluflix {
+        font-size: 1.5rem; /* Reduz tamanho do logo */
+        letter-spacing: 1px; /* Mantém espaçamento */
+    }
+
+    main {
+        padding: 2rem 1rem; /* Reduz espaçamento */
+        gap: 1.5rem; /* Reduz gap */
+    }
+
+    header h1 {
+        font-size: 2rem; /* Reduz tamanho do título em telas pequenas */
+        margin-bottom: 0.5rem; /* Reduz margem */
+    }
+
+    .profile-actions {
+        gap: 1rem; /* Reduz espaço entre botões */
+        margin-bottom: 0.5rem; /* Reduz espaço abaixo */
+    }
+
+    .action-btn {
+        padding: 0.6rem 1.2rem; /* Reduz padding */
+        font-size: 0.9rem; /* Reduz tamanho do texto */
+    }
+
+    .profiles ol {
+        gap: 1rem; /* Reduz espaçamento entre perfis */
+    }
+
+    .profile img {
+        width: 120px; /* Reduz largura das imagens */
+        height: 120px; /* Reduz altura das imagens */
+    }
+
+    .theme-toggle {
+        font-size: 1.5rem; /* Reduz tamanho do botão em telas pequenas */
+        top: 50px; /* Ajusta posição para não sobrepor header */
+        right: 10px; /* Reduz distância da direita */
+    }
+}

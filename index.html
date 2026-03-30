@@ -1,0 +1,114 @@
+<!DOCTYPE html> <!-- Declare o tipo de documento como HTML5 -->
+<html lang="pt-br"> <!-- Define o idioma da página como português brasileiro -->
+
+<head>
+    <!-- Define codificação de caracteres como UTF-8 -->
+    <meta charset="UTF-8">
+    <!-- Configura viewport para responsividade em dispositivos móveis -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Define descrição da página para mecanismos de busca -->
+    <meta name="description" content="Selecione o perfil para começar a assistir">
+    <!-- Define título da página que aparece na aba -->
+    <title>AluFlix - Selecione seu perfil</title>
+    <!-- Importa arquivo CSS externo para estilos -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Importa arquivo JavaScript externo para funcionalidades -->
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <!-- Botão para alternar entre modo escuro e claro -->
+    <button id="theme-toggle" class="theme-toggle" aria-label="Alternar modo escuro/claro">🌙</button>
+
+    <!-- Header com logo AluFlix -->
+    <div class="header-top">
+        <div class="logo-container">
+            <h1 class="logo-aluflix">AluFlix</h1>
+        </div>
+    </div>
+
+    <!-- Elemento principal da página -->
+    <main>
+        <!-- Cabeçalho com título principal -->
+        <header>
+            <h1>Quem está assistindo?</h1>
+        </header>
+
+        <!-- Seção de ações (Gerenciar e Adicionar) -->
+        <section class="profile-actions" aria-label="Ações de gerenciamento de perfil">
+            <button class="action-btn manage-btn" id="manage-profiles-btn">
+                <i class="icon-gear">⚙️</i>
+                <span>Gerenciar Perfis</span>
+            </button>
+            <button class="action-btn add-btn" id="add-profile-btn">
+                <i class="icon-plus">➕</i>
+                <span>Adicionar Perfil</span>
+            </button>
+        </section>
+
+        <!-- Seção de perfis com label acessível -->
+        <section class="profiles" aria-label="Seleção de perfis">
+            <!-- Lista não ordenada como container principal -->
+            <ul>
+                <!-- Item da lista não ordenada -->
+                <li>
+                    <!-- Lista ordenada dos perfis disponíveis -->
+                    <ol>
+                        <!-- Primeiro perfil (Alex) -->
+                        <li>
+                            <a href="catalogo/catalogo.html" class="profile-link" aria-label="Selecionar perfil do Alex">
+                            <!-- Artigo que contém cada perfil -->
+                            <article class="profile">
+                                <!-- Figure agrupa imagem com legenda do perfil -->
+                                <figure>
+                                    <!-- Imagem do perfil com descrição alternativa -->
+                                    <img src="assets/perfil-1.png" alt="Uma ilustração de estilo colagem e risógrafo de um personagem punk com cabelo espetado roxo e rosa, vestindo uma jaqueta cravejada e uma coleira, sobre um fundo laranja brilhante.">
+                                    <!-- Legenda com nome do perfil -->
+                                    <figcaption>Alex</figcaption>
+                                </figure>
+                            </article>
+                        </li>
+
+                        <!-- Segundo perfil (João) -->
+                        <li>
+                            <a href="catalogo/catalogo.html" class="profile-link" aria-label="Selecionar perfil do João">
+                            <article class="profile">
+                                <figure>
+                                    <img src="assets/perfil-2.png" alt="Uma imagem em stop-motion de um boneco com roupas vitorianas, incluindo uma cartola e um cachecol verde, com olhos arregalados, fazendo um gesto de "silêncio" com o dedo nos lábios, em um cenário gótico e nebuloso.">
+                                    <figcaption>João</figcaption>
+                                </figure>
+                            </article>
+                        </li>
+
+                        <!-- Terceiro perfil (Ana) -->
+                        <li>
+                            <a href="catalogo/catalogo.html" class="profile-link" aria-label="Selecionar perfil da Ana">
+                            <article class="profile">
+                                <figure>
+                                    <img src="assets/perfil-3.png"
+                                        alt="A imagem exibe um broche de metal no estilo 'enamel pin', apresentando a ilustração estilizada de um avatar feminino. A figura possui cabelos castanhos volumosos e ondulados, pele de tom médio, e usa uma blusa azul. Ela tem um sorriso simples e olhos formados por pequenas esferas prateadas, tudo contornado por um acabamento metálico prateado brilhante sobre um fundo cinza claro.">
+                                    <figcaption>Ana</figcaption>
+                                </figure>
+                            </article>
+                        </li>
+
+                        <!-- Quarto perfil (Lúcia) -->
+                        <li>
+                            <a href="catalogo/catalogo.html" class="profile-link" aria-label="Selecionar perfil da Lúcia">
+                            <article class="profile">
+                                <figure>
+                                    <img src="assets/perfil-4.png"
+                                        alt="Retrato em estilo animação 3D de uma jovem sorridente com óculos redondos, touca verde e jaqueta marrom sobre camisa xadrez, apresentada como uma fotografia em uma mesa de madeira.">
+                                    <figcaption>Lúcia</figcaption>
+                                </figure>
+                            </article>
+                        </li>
+                    </ol>
+                </li>
+            </ul>
+        </section>
+    </main>
+    <script src="jspt/index.js"></script>
+    <script src="jspt/profileManager.js"></script>
+</body>
+</html>
